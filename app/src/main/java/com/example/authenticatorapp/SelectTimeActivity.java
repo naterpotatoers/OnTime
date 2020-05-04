@@ -108,7 +108,11 @@ public class SelectTimeActivity extends AppCompatActivity {
                         provider = document.toObject(Provider.class);
                         startTime = provider.getStartTime();
                         endTime = provider.getEndTime();
-                        endTime = provider.getEndTime();
+                        //Need to remove times outside set schedule
+                        int from = schedule.indexOf(startTime);
+                        int to = schedule.indexOf(endTime);
+                        schedule.subList(to+1, schedule.size()).clear();
+                        schedule.subList(0, from).clear();
                         Log.d(TAG, "DocumentSnapshot data: " + document.getData());
                         Log.d(TAG, "provider: " + provider.toString());
                     } else {
