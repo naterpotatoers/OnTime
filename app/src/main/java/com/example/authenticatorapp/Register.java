@@ -13,19 +13,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
-import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -59,7 +55,7 @@ public class Register extends AppCompatActivity {
 
         emailId = findViewById(R.id.editText);
         password = findViewById(R.id.editText2);
-        btnSignUp = findViewById(R.id.buttonLogout);
+        btnSignUp = findViewById(R.id.buttonUpdateSchedule);
         textSignIn = findViewById(R.id.textView3);
         businessName = findViewById(R.id.editTextBusinessName);
         businessAddress = findViewById(R.id.editTextBusinessAddress);

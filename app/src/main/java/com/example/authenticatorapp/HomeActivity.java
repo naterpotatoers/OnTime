@@ -15,26 +15,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class HomeActivity extends AppCompatActivity {
     private ArrayAdapter adapter;
@@ -67,10 +56,10 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        buttonSetSchedule = (Button) findViewById(R.id.buttonSetSchedule);
+        buttonSetSchedule = (Button) findViewById(R.id.buttonGoToHome);
         listViewSchedule = (ListView) findViewById(R.id.listViewSchedule);
         textViewMiniTitle = (TextView) findViewById(R.id.textViewMiniTitle);
-        btnLogout = findViewById(R.id.buttonLogout);
+        btnLogout = findViewById(R.id.buttonUpdateSchedule);
 
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, schedule);
         //Get signed in user's company name (Display name set in register activity)

@@ -116,7 +116,7 @@ public class ScheduleViewActivity extends AppCompatActivity {
 
     private void deleteAppointmentFromDb(String theTime){
         final String time = theTime;
-        DocumentReference docRef = db.collection(PATH_PROVIDER_COLLECTION).document(companyName).collection(PATH_DAILY_SCHEDULE).document(appointmentDate).collection(appointmentTime).document(time);
+        final DocumentReference docRef = db.collection(PATH_PROVIDER_COLLECTION).document(companyName).collection(PATH_DAILY_SCHEDULE).document(appointmentDate).collection(appointmentTime).document(time);
         docRef.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {

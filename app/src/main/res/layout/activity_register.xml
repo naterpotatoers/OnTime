@@ -99,7 +99,7 @@
         app:layout_constraintVertical_bias="0.908" />
 
     <Button
-        android:id="@+id/buttonLogout"
+        android:id="@+id/buttonUpdateSchedule"
         android:layout_width="240dp"
         android:layout_height="47dp"
         android:background="#212121"

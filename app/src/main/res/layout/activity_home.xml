@@ -40,7 +40,7 @@
         app:layout_constraintVertical_bias="0.119" />
 
     <Button
-        android:id="@+id/buttonLogout"
+        android:id="@+id/buttonUpdateSchedule"
         android:layout_width="240dp"
         android:layout_height="47dp"
         android:background="#212121"
@@ -53,6 +53,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />
 
+    <Button
+        android:id="@+id/buttonGoToHome"
+        android:layout_width="240dp"
+        android:layout_height="47dp"
+        android:background="#212121"
+        android:text="Set Schedule"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.885" />
+
     <ListView
         android:id="@+id/listViewSchedule"
         android:layout_width="408dp"
@@ -63,17 +77,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/buttonSetSchedule"
-        android:layout_width="240dp"
-        android:layout_height="47dp"
-        android:background="#212121"
-        android:textColor="#FFFFFF"
-        android:text="Set Schedule"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.885" />
 </androidx.constraintlayout.widget.ConstraintLayout>
