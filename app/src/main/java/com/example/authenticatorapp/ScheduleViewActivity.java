@@ -7,11 +7,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
@@ -64,7 +68,7 @@ public class ScheduleViewActivity extends AppCompatActivity {
         appointmentDate = extraIntentInfo.getStringExtra(APPOINTMENT_DATE);
         companyName = extraIntentInfo.getStringExtra(COMPANY_NAME);
 
-        TextView textViewDate = (TextView) findViewById(R.id.textViewDate);
+        final TextView textViewDate = (TextView) findViewById(R.id.textViewDate);
         final ListView listViewSchedule = (ListView) findViewById(R.id.listViewSchedule);
         textViewDate.setText(appointmentDate);
 
@@ -79,6 +83,7 @@ public class ScheduleViewActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
                     for (QueryDocumentSnapshot document : task.getResult()) {
+                        //Gets the document info using the fields CLIENT_NAME, APPOINTMENT_TIME, & CLIENT_PHONE_NUMBER
                         clientName = document.getString(CLIENT_NAME);
                         appointmentTime = document.getString(APPOINTMENT_TIME);
                         clientPhoneNumber = document.getString(CLIENT_PHONE_NUMBER);
@@ -91,6 +96,34 @@ public class ScheduleViewActivity extends AppCompatActivity {
                 } else {
                     Log.d(TAG, "Error getting documents: " + task.getException());
                 }
+            }
+        });
+        //Deletes the appointment from database
+        listViewSchedule.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                appointmentTime = (String) adapter.getItem(position).toString();
+                final String time = appointmentTime.substring(appointmentTime.indexOf("@")+2, appointmentTime.indexOf("\n"));
+                textViewDate.setText(time);
+                //This doesn't work!!
+                deleteAppointmentFromDb(time);
+                adapter.notifyDataSetChanged();
+                return true;
+            }
+        });
+
+    }
+
+    private void deleteAppointmentFromDb(String theTime){
+        final String time = theTime;
+        DocumentReference docRef = db.collection(PATH_PROVIDER_COLLECTION).document(companyName).collection(PATH_DAILY_SCHEDULE).document(appointmentDate).collection(appointmentTime).document(time);
+        docRef.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful())
+                    Log.d(TAG, "Deleted appointment from db!");
+                else
+                    Log.d(TAG, "Unable to delete appointment!");
             }
         });
     }
