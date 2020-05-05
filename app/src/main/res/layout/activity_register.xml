@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CBEFA3"
     tools:context=".Register">
 
     <TextView
@@ -61,8 +60,7 @@
         app:layout_constraintBottom_toTopOf="@+id/editTextBusinessAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CreateNewAccount"
-        app:layout_constraintVertical_bias=".5" />
+        app:layout_constraintTop_toBottomOf="@+id/CreateNewAccount" />
 
     <EditText
         android:id="@+id/editTextBusinessAddress"

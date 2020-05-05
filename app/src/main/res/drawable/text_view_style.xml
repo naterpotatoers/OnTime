@@ -13,12 +13,12 @@
         android:top="6dp" />
 
     <stroke
-        android:color="#bbb"
-        android:width="2px"/>
+        android:color="#2b6f2b"
+        android:width="2dp"/>
 
     <gradient
-        android:startColor="#ddd"
-        android:endColor="#fff"/>
+        android:startColor="#cbcbcb"
+        android:endColor="#ebebeb"/>
 
     <corners
         android:topRightRadius="15dp"

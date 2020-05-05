@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#cbefa3"
     tools:context=".SelectDateActivity">
 
     <TextView
@@ -44,7 +43,8 @@
         android:id="@+id/calendarView"
         android:layout_width="417dp"
         android:layout_height="400dp"
-        android:background="#C4FF8C"
+        android:background="@drawable/calendar_style"
+        android:selectedWeekBackgroundColor="#BF2B6F2B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

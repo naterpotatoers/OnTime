@@ -25,30 +25,32 @@
 
     <TextView
         android:id="@+id/CreateNewAccount"
-        android:layout_width="141dp"
-        android:layout_height="29dp"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
         android:fontFamily="sans-serif"
+        android:gravity="center"
         android:text="@string/create_new_account"
         android:textColor="#000000"
-        android:textSize="14sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.202" />
+        app:layout_constraintVertical_bias=".15" />
 
     <EditText
         android:id="@+id/editTextBusinessAddress"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_height="45dp"
+        android:background="@drawable/edit_text_style"
+        android:ems="12"
         android:hint="Business Address"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.567" />
+        app:layout_constraintVertical_bias=".6" />
 
     <EditText
         android:id="@+id/editText2"
@@ -59,46 +61,47 @@
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
         android:autofillHints=""
-        android:ems="10"
+        android:background="@drawable/edit_text_style"
+        android:ems="12"
         android:hint="@string/password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/editTextBusinessAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.381" />
+        app:layout_constraintTop_toBottomOf="@+id/CreateNewAccount" />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:layout_marginStart="100dp"
         android:layout_marginLeft="100dp"
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
-        android:layout_marginBottom="28dp"
         android:autofillHints=""
-        android:ems="10"
+        android:background="@drawable/edit_text_style"
+        android:ems="12"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/editTextBusinessAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.302" />
+        app:layout_constraintTop_toBottomOf="@+id/CreateNewAccount"
+        app:layout_constraintVertical_bias=".15" />
 
     <EditText
         android:id="@+id/editTextBusinessName"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_height="45dp"
+        android:background="@drawable/edit_text_style"
+        android:ems="12"
         android:hint="Business Name"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/editTextBusinessAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.469" />
+        app:layout_constraintTop_toBottomOf="@+id/CreateNewAccount"
+        app:layout_constraintVertical_bias=".85" />
 
     <TextView
         android:id="@+id/textView3"
@@ -109,20 +112,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.911" />
+        app:layout_constraintVertical_bias=".9" />
 
     <Button
         android:id="@+id/buttonUpdateSchedule"
-        android:layout_width="240dp"
-        android:layout_height="47dp"
-        android:background="#212121"
+        android:layout_width="255dp"
+        android:layout_height="45dp"
+        android:background="@drawable/btn_rounded_dark"
         android:text="@string/sign_up"
         android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.839" />
+        app:layout_constraintVertical_bias="0.8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

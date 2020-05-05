@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#cbefa3"
     tools:context=".ConfirmationActivity">
 
     <TextView
@@ -75,6 +74,7 @@
         android:layout_height="34dp"
         android:gravity="center"
         android:text="@string/appointment_booked"
+        android:textColor="#000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

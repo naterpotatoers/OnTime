@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#cbefa3"
     tools:context=".ClientInformationActivity">
 
     <TextView
@@ -58,9 +57,9 @@
         android:id="@+id/textViewAppointmentInfo"
         android:layout_width="300dp"
         android:layout_height="135dp"
+        android:background="@drawable/text_view_style"
         android:gravity="center"
         android:textSize="24sp"
-        android:background="@drawable/text_view_style"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
