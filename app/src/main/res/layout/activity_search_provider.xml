@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#cbefa3"
     tools:context=".SearchProviderActivity">
 
     <TextView
@@ -29,27 +30,29 @@
     <EditText
         android:id="@+id/editTextBusinessName"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:ems="10"
+        android:layout_height="45dp"
+        android:background="@drawable/edit_text_style"
+        android:ems="12"
         android:hint="Business Name"
         android:inputType="textPersonName"
         android:text="@string/BusinessName"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/listViewBusinesses"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textMainCompanyTitle"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textMainCompanyTitle" />
 
     <ListView
         android:id="@+id/listViewBusinesses"
-        android:layout_width="330dp"
-        android:layout_height="309dp"
+        android:layout_width="370dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextBusinessName" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

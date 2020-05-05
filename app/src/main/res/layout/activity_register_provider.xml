@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterProviderActivity"
-    >
+    android:background="#cbefa3"
+    tools:context=".RegisterProviderActivity">
 
     <TextView
         android:id="@+id/textMainCompanyTitle"
@@ -35,49 +35,51 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.187"
+        app:layout_constraintVertical_bias=".25"
         app:srcCompat="@drawable/ontime_logo" />
 
     <Button
         android:id="@+id/buttonUpdateSchedule"
-        android:layout_width="240dp"
-        android:layout_height="47dp"
-        android:background="#212121"
+        android:layout_width="255dp"
+        android:layout_height="45dp"
+        android:background="@drawable/btn_rounded_dark"
         android:onClick="goToHomeActivity"
         android:text="@string/done"
         android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.828" />
+        app:layout_constraintVertical_bias=".8" />
 
     <EditText
         android:id="@+id/editTextBusinessName"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_height="45dp"
+        android:background="@drawable/edit_text_style"
+        android:ems="12"
         android:hint="Business Name"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.603" />
+        app:layout_constraintVertical_bias=".6" />
 
     <EditText
         android:id="@+id/editTextBusinessAddress"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_height="45dp"
+        android:background="@drawable/edit_text_style"
+        android:ems="12"
         android:hint="Business Address"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonUpdateSchedule"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.686" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextBusinessName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#cbefa3"
     tools:context=".SetAvailabilityActivity">
 
     <TextView
@@ -28,42 +29,43 @@
 
     <Button
         android:id="@+id/buttonGoToHome"
-        android:layout_width="240dp"
-        android:layout_height="47dp"
-        android:background="#212121"
+        android:layout_width="255dp"
+        android:layout_height="45dp"
+        android:background="@drawable/btn_rounded_dark"
         android:text="Home"
         android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintVertical_bias=".875" />
 
     <Button
         android:id="@+id/buttonUpdateSchedule"
-        android:layout_width="240dp"
-        android:layout_height="47dp"
-        android:background="#212121"
+        android:layout_width="255dp"
+        android:layout_height="45dp"
+        android:background="@drawable/btn_rounded_dark"
         android:text="Submit"
         android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.88" />
+        app:layout_constraintVertical_bias=".75" />
 
     <TextView
         android:id="@+id/textViewStartTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
+        android:gravity="center"
         android:text="Start time"
-        android:textSize="18sp"
+        android:textColor="#000"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/spinnerStartTime"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textMainCompanyTitle"
         app:layout_constraintVertical_bias="0.943" />
@@ -75,18 +77,19 @@
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.315" />
+        app:layout_constraintVertical_bias=".33" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
+        android:gravity="center"
         android:text="End time"
-        android:textSize="18sp"
+        android:textColor="#000"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/spinnerEndTime"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,9 +103,8 @@
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.483" />
+        app:layout_constraintVertical_bias=".5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

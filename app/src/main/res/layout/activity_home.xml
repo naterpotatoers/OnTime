@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#cbefa3"
     tools:context=".HomeActivity">
 
     <TextView
@@ -30,50 +31,54 @@
         android:id="@+id/textViewMiniTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="@string/welcome_you_are_logged_in"
+        android:textColor="#000"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/listViewSchedule"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textMainCompanyTitle"
-        app:layout_constraintVertical_bias="0.119" />
+        app:layout_constraintTop_toBottomOf="@+id/textMainCompanyTitle" />
 
     <Button
         android:id="@+id/buttonUpdateSchedule"
-        android:layout_width="240dp"
-        android:layout_height="47dp"
-        android:background="#212121"
+        android:layout_width="255dp"
+        android:layout_height="45dp"
+        android:background="@drawable/btn_rounded_dark"
         android:text="@string/logout"
         android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintVertical_bias=".95" />
 
     <Button
         android:id="@+id/buttonGoToHome"
-        android:layout_width="240dp"
-        android:layout_height="47dp"
-        android:background="#212121"
+        android:layout_width="255dp"
+        android:layout_height="45dp"
+        android:background="@drawable/btn_rounded_dark"
         android:text="Set Schedule"
         android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.885" />
+        app:layout_constraintVertical_bias=".85" />
 
     <ListView
         android:id="@+id/listViewSchedule"
-        android:layout_width="408dp"
-        android:layout_height="417dp"
+        android:layout_width="370dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
